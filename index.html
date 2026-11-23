@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mural de publicações conectado à API JSONPlaceholder.">
+  <title>Meu Mural | Publicações</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topo">
+    <div class="topo-conteudo">
+      <a class="marca" href="#" aria-label="Meu Mural - início">
+        <span class="marca-icone">M</span>
+        <span>meu<span class="marca-destaque">mural</span></span>
+      </a>
+      <span class="status-api"><span class="status-ponto"></span> API JSONPlaceholder</span>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="apresentacao">
+      <span class="etiqueta">PAINEL DE PUBLICAÇÕES</span>
+      <h1>Ideias em um só <span>lugar.</span></h1>
+      <p>Explore publicações carregadas diretamente de uma API. Pesquise por títulos e encontre o que procura.</p>
+    </section>
+
+    <section class="painel" aria-label="Controles do mural">
+      <div class="painel-topo">
+        <div>
+          <h2>Publicações</h2>
+          <p id="contador">Aguardando carregamento</p>
+        </div>
+        <button id="btn-carregar" class="botao-principal" type="button">
+          <span aria-hidden="true">↻</span> Carregar publicações
+        </button>
+      </div>
+
+      <label class="busca">
+        <span aria-hidden="true">⌕</span>
+        <input id="filtro" type="search" placeholder="Filtrar pelo título..." autocomplete="off">
+      </label>
+
+      <p id="mensagem" class="mensagem" role="status" aria-live="polite">Clique em “Carregar publicações” para buscar os dados.</p>
+      <section id="lista-posts" class="lista-posts" aria-label="Publicações"></section>
+    </section>
+
+    <footer class="rodape">
+      <span>MEU MURAL</span>
+      <span>Dados de demonstração fornecidos pela JSONPlaceholder</span>
+    </footer>
+  </main>
+</body>
+</html>
